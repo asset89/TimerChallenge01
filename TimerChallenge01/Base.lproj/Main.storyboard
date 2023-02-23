@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="viewController" id="BYZ-38-t0r" customClass="ViewController" customModule="TimerChallenge01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PzL-aw-SgK">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="425.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZ7-9l-jYo">
+                                        <rect key="frame" x="168.66666666666666" y="188.66666666666666" width="55.666666666666657" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="x1m-hu-7UW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igr-ml-KlH">
+                                        <rect key="frame" x="257" y="40" width="100" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="BNK-0z-AoH"/>
+                                            <constraint firstAttribute="width" constant="100" id="cdc-2U-PPQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Reset">
+                                            <color key="titleColor" systemColor="opaqueSeparatorColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resetButton_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SAV-wA-pmf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="igr-ml-KlH" firstAttribute="top" secondItem="PzL-aw-SgK" secondAttribute="top" constant="40" id="7nh-r8-HY1"/>
+                                    <constraint firstAttribute="trailing" secondItem="igr-ml-KlH" secondAttribute="trailing" constant="36" id="Hvl-Hw-yHS"/>
+                                    <constraint firstItem="OZ7-9l-jYo" firstAttribute="centerY" secondItem="PzL-aw-SgK" secondAttribute="centerY" id="a7r-YI-U6V"/>
+                                    <constraint firstItem="OZ7-9l-jYo" firstAttribute="centerX" secondItem="PzL-aw-SgK" secondAttribute="centerX" id="tEV-Mk-yg6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vqm-le-q6a">
+                                <rect key="frame" x="0.0" y="425.66666666666669" width="393" height="1"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="BLm-Wc-DHX"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lYJ-T4-O0d">
+                                <rect key="frame" x="0.0" y="426.66666666666674" width="393" height="425.33333333333326"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFa-t7-NwH">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="425.33333333333331"/>
+                                        <color key="backgroundColor" red="0.0" green="0.72156862749999995" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="START">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="startButton_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hvj-XW-6AC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7s-XW-ECW">
+                                        <rect key="frame" x="196.66666666666663" y="0.0" width="196.33333333333337" height="425.33333333333331"/>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.24313725489999999" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="PAUSE">
+                                            <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="pauseButton_Tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uUP-in-LYb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PzL-aw-SgK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="10z-OV-1ee"/>
+                            <constraint firstItem="lYJ-T4-O0d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6iq-Mt-COK"/>
+                            <constraint firstItem="vqm-le-q6a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A4X-TQ-d1A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vqm-le-q6a" secondAttribute="trailing" id="Bpb-VG-BiE"/>
+                            <constraint firstItem="PzL-aw-SgK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C00-TF-zbo"/>
+                            <constraint firstItem="lYJ-T4-O0d" firstAttribute="top" secondItem="vqm-le-q6a" secondAttribute="bottom" id="FXG-4b-xU4"/>
+                            <constraint firstAttribute="trailing" secondItem="PzL-aw-SgK" secondAttribute="trailing" id="LhU-k1-Jxx"/>
+                            <constraint firstAttribute="trailing" secondItem="lYJ-T4-O0d" secondAttribute="trailing" id="SG9-Wd-pA0"/>
+                            <constraint firstAttribute="bottom" secondItem="lYJ-T4-O0d" secondAttribute="bottom" id="WxG-8E-PP7"/>
+                            <constraint firstItem="vqm-le-q6a" firstAttribute="top" secondItem="PzL-aw-SgK" secondAttribute="bottom" id="foM-t2-YgU"/>
+                            <constraint firstItem="vqm-le-q6a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iRL-c3-zxR"/>
+                            <constraint firstItem="vqm-le-q6a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sDO-Ar-BBq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="e7s-XW-ECW" id="9cd-eQ-9ov"/>
+                        <outlet property="startButton" destination="HFa-t7-NwH" id="njP-Fa-VWa"/>
+                        <outlet property="timerLabel" destination="OZ7-9l-jYo" id="Glj-nz-Lnt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
